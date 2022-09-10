@@ -11,13 +11,13 @@ import {
   Keyboard,
   TouchableHighlight,
   Platform,
-} from 'react-native';
-import { useForm, Controller } from 'react-hook-form';
-import { useState } from 'react';
+} from "react-native";
+import { useForm, Controller } from "react-hook-form";
+import { useState } from "react";
 
-import styles from './styles';
-import IosDatePicker from '../../components/IosDatePicker';
-import AndroidDatePicker from '../../components/AndroidDatePicker';
+import styles from "./styles";
+import IosDatePicker from "../../components/IosDatePicker";
+import AndroidDatePicker from "../../components/AndroidDatePicker";
 
 export default function ContactUsScreen() {
   const [showDatePicker, setShowDatePicker] = useState(false);
@@ -32,9 +32,9 @@ export default function ContactUsScreen() {
     getValues,
   } = useForm({
     defaultValues: {
-      name: '',
-      email: '',
-      birthday: '',
+      name: "",
+      email: "",
+      birthday: "",
     },
   });
 
@@ -51,7 +51,7 @@ export default function ContactUsScreen() {
     const currentDateStr = `${selectedDate.getDate()}/${
       selectedDate.getMonth() + 1
     }/${selectedDate.getFullYear()}`;
-    setValue('birthday', currentDateStr);
+    setValue("birthday", currentDateStr);
 
     setShowDatePicker(false);
     setDate(selected);
@@ -62,8 +62,10 @@ export default function ContactUsScreen() {
     return (
       <>
         <Text style={styles.modalText}>Name: {form?.name}</Text>
-        <Text style={styles.modalText}>Email: {form?.email || '-'}</Text>
-        <Text style={styles.modalText}>Birth Date: {form?.birthday || '-'}</Text>
+        <Text style={styles.modalText}>Email: {form?.email || "-"}</Text>
+        <Text style={styles.modalText}>
+          Birth Date: {form?.birthday || "-"}
+        </Text>
       </>
     );
   };
@@ -88,6 +90,7 @@ export default function ContactUsScreen() {
             }}
             render={({ field: { onChange, onBlur, value } }) => (
               <TextInput
+                testID="nameTest"
                 style={styles.input}
                 onBlur={onBlur}
                 onChangeText={onChange}
@@ -97,13 +100,13 @@ export default function ContactUsScreen() {
             )}
             name="name"
           />
-          {errors.name?.type === 'required' && (
+          {errors.name?.type === "required" && (
             <Text style={styles.inputError}>Name is required</Text>
           )}
-          {errors.name?.type === 'maxLength' && (
+          {errors.name?.type === "maxLength" && (
             <Text style={styles.inputError}>Cannot exceed 50 characters</Text>
           )}
-          {errors.name?.type === 'pattern' && (
+          {errors.name?.type === "pattern" && (
             <Text style={styles.inputError}>Enter a valid name</Text>
           )}
 
@@ -117,6 +120,7 @@ export default function ContactUsScreen() {
             }}
             render={({ field: { onChange, onBlur, value } }) => (
               <TextInput
+                testID="emailTest"
                 style={styles.input}
                 onBlur={onBlur}
                 onChangeText={onChange}
@@ -127,7 +131,7 @@ export default function ContactUsScreen() {
             )}
             name="email"
           />
-          {errors.email?.type === 'pattern' && (
+          {errors.email?.type === "pattern" && (
             <Text style={styles.inputError}>Enter a valid email address</Text>
           )}
 
@@ -138,7 +142,7 @@ export default function ContactUsScreen() {
               maxLength: 100,
             }}
             render={({ field: { value } }) => (
-              <View style={{ width: '100%' }}>
+              <View style={{ width: "100%" }}>
                 <TouchableHighlight
                   onPress={() => {
                     Keyboard.dismiss();
@@ -162,20 +166,31 @@ export default function ContactUsScreen() {
             name="birthday"
           />
 
-          <TouchableOpacity style={styles.submitButton} onPress={handleSubmit(onSubmit)}>
+          <TouchableOpacity
+            style={styles.submitButton}
+            onPress={handleSubmit(onSubmit)}
+          >
             <Text style={styles.submitText}>Submit</Text>
           </TouchableOpacity>
         </KeyboardAvoidingView>
       </ScrollView>
 
       {/* Date Picker IOS */}
-      {showDatePicker && Platform.OS === 'ios' && (
-        <IosDatePicker onDateCancel={onDateCancel} onDateSelect={onDateSelect} date={date} />
+      {showDatePicker && Platform.OS === "ios" && (
+        <IosDatePicker
+          onDateCancel={onDateCancel}
+          onDateSelect={onDateSelect}
+          date={date}
+        />
       )}
 
       {/* Date Picker Android */}
-      {showDatePicker && Platform.OS === 'android' && (
-        <AndroidDatePicker onDateCancel={onDateCancel} onDateSelect={onDateSelect} date={date} />
+      {showDatePicker && Platform.OS === "android" && (
+        <AndroidDatePicker
+          onDateCancel={onDateCancel}
+          onDateSelect={onDateSelect}
+          date={date}
+        />
       )}
 
       {/* Modal Input Details */}

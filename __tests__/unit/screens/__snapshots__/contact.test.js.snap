@@ -1,0 +1,166 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContactUsScreen/> should render correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "backgroundColor": "aliceblue",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "flex": 1,
+      }
+    }
+    keyboardShouldPersistTaps="handled"
+    scrollEnabled={false}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "alignSelf": "center",
+              "backgroundColor": "transparent",
+              "flex": 1,
+              "justifyContent": "center",
+              "width": "60%",
+            },
+            Object {
+              "paddingBottom": 0,
+            },
+          ]
+        }
+      >
+        <Text>
+          Please fill in the required fields
+        </Text>
+        <TextInput
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Name"
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 5,
+              "borderWidth": 0.5,
+              "fontSize": 16,
+              "marginTop": 20,
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+              "width": "100%",
+            }
+          }
+          testID="nameTest"
+          value=""
+        />
+        <TextInput
+          keyboardType="email-address"
+          onBlur={[Function]}
+          onChangeText={[Function]}
+          placeholder="Email"
+          style={
+            Object {
+              "backgroundColor": "white",
+              "borderRadius": 5,
+              "borderWidth": 0.5,
+              "fontSize": 16,
+              "marginTop": 20,
+              "paddingHorizontal": 16,
+              "paddingVertical": 8,
+              "width": "100%",
+            }
+          }
+          testID="emailTest"
+          value=""
+        />
+        <View
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          <View
+            accessible={true}
+            focusable={true}
+            onClick={[Function]}
+            onResponderGrant={[Function]}
+            onResponderMove={[Function]}
+            onResponderRelease={[Function]}
+            onResponderTerminate={[Function]}
+            onResponderTerminationRequest={[Function]}
+            onStartShouldSetResponder={[Function]}
+          >
+            <TextInput
+              editable={false}
+              onPressIn={[Function]}
+              placeholder="Birth Date"
+              style={
+                Object {
+                  "backgroundColor": "white",
+                  "borderRadius": 5,
+                  "borderWidth": 0.5,
+                  "fontSize": 16,
+                  "marginTop": 20,
+                  "paddingHorizontal": 16,
+                  "paddingVertical": 8,
+                  "width": "100%",
+                }
+              }
+              value=""
+            />
+          </View>
+        </View>
+        <View
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "center",
+              "backgroundColor": "cornflowerblue",
+              "borderRadius": 20,
+              "marginTop": 30,
+              "opacity": 1,
+              "paddingHorizontal": 20,
+              "paddingVertical": 18,
+              "width": "100%",
+            }
+          }
+        >
+          <Text
+            style={
+              Object {
+                "color": "white",
+                "fontWeight": "bold",
+              }
+            }
+          >
+            Submit
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+  <Modal
+    animationType="slide"
+    hardwareAccelerated={false}
+    transparent={true}
+    visible={false}
+  />
+</RCTSafeAreaView>
+`;

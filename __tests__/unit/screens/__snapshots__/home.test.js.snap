@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "aliceblue",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "borderRadius": 20,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 18,
+      }
+    }
+    testID="navigateButton"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Contact Us
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`<HomeScreen/> should render correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "alignItems": "center",
+      "backgroundColor": "aliceblue",
+      "flex": 1,
+      "justifyContent": "center",
+    }
+  }
+>
+  <View
+    accessible={true}
+    collapsable={false}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "backgroundColor": "cornflowerblue",
+        "borderRadius": 20,
+        "opacity": 1,
+        "paddingHorizontal": 20,
+        "paddingVertical": 18,
+      }
+    }
+    testID="navigateButton"
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontWeight": "bold",
+        }
+      }
+    >
+      Contact Us
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;

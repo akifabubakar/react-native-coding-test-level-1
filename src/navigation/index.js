@@ -1,24 +1,24 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ContactUsScreen, HomeScreen } from '../screens';
+import { ContactUsScreen, HomeScreen } from "../screens";
 
 const Stack = createNativeStackNavigator();
 
-function AppStack() {
+export function AppStack() {
   return (
     <Stack.Navigator
       initialRouteName="Home"
       screenOptions={{
-        headerTintColor: 'white',
-        headerStyle: { backgroundColor: 'steelblue' },
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "steelblue" },
       }}
     >
       <Stack.Screen
         name="Home"
         component={HomeScreen}
         options={{
-          title: 'Home',
+          title: "Home",
           headerShown: false,
         }}
       />
@@ -26,15 +26,15 @@ function AppStack() {
         name="Contact"
         component={ContactUsScreen}
         options={{
-          title: 'Contact Us',
-          headerBackTitle: '',
+          title: "Contact Us",
+          headerBackTitle: "",
         }}
       />
     </Stack.Navigator>
   );
 }
 
-export default function Navigation() {
+export default function AppNavigator() {
   return (
     <NavigationContainer>
       <AppStack />

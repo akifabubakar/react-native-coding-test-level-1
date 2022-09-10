@@ -1,8 +1,8 @@
-import { View, Text, TouchableOpacity, TouchableHighlight } from 'react-native';
-import DateTimePicker from '@react-native-community/datetimepicker';
-import PropTypes from 'prop-types';
+import { View, Text, TouchableOpacity, TouchableHighlight } from "react-native";
+import DateTimePicker from "@react-native-community/datetimepicker";
+import PropTypes from "prop-types";
 
-import styles from './styles';
+import styles from "./styles";
 
 function IosDatePicker(props) {
   const { onDateCancel, onDateSelect, date } = props;
@@ -15,12 +15,19 @@ function IosDatePicker(props) {
 
   return (
     <View style={[styles.dateContainer, styles.iosDateContainer]}>
-      <TouchableHighlight style={{ flex: 1 }} onPress={onDateCancel} underlayColor="transparent">
+      <TouchableHighlight
+        style={{ flex: 1 }}
+        onPress={onDateCancel}
+        underlayColor="transparent"
+      >
         <View style={styles.outsideDateContainer} />
       </TouchableHighlight>
 
-      <View style={{ backgroundColor: 'white' }}>
-        <TouchableOpacity style={styles.dateCancelButton} onPress={onDateCancel}>
+      <View style={{ backgroundColor: "white" }}>
+        <TouchableOpacity
+          style={styles.dateCancelButton}
+          onPress={onDateCancel}
+        >
           <Text style={styles.cancelText}>Cancel</Text>
         </TouchableOpacity>
 
@@ -32,7 +39,10 @@ function IosDatePicker(props) {
           maximumDate={new Date()}
         />
 
-        <TouchableOpacity style={styles.dateOkButton} onPress={() => onDateSelect(dateValue)}>
+        <TouchableOpacity
+          style={styles.dateOkButton}
+          onPress={() => onDateSelect(dateValue)}
+        >
           <Text style={styles.textStyle}>OK</Text>
         </TouchableOpacity>
       </View>
