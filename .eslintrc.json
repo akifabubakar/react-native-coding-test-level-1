@@ -10,7 +10,8 @@
     "plugin:json/recommended",
     "airbnb",
     "airbnb/hooks",
-    "prettier"
+    "prettier",
+    "plugin:react-redux/recommended"
   ],
   "overrides": [],
   "parserOptions": {
@@ -21,7 +22,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "react-native", "json", "jest"],
+  "plugins": ["react", "react-native", "json", "jest", "react-redux"],
   "rules": {
     // allow .js files to contain JSX code
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
@@ -44,6 +45,11 @@
       {
         "allow": ["StatusBar"]
       }
+    ],
+
+    "no-param-reassign": [
+      "error",
+      { "props": true, "ignorePropertyModificationsFor": ["state"] }
     ]
   }
 }

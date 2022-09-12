@@ -7,16 +7,17 @@ export default StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  button: {
+  contactButton: {
     backgroundColor: "cornflowerblue",
     paddingVertical: 18,
     paddingHorizontal: 20,
     borderRadius: 20,
-    marginBottom: 20,
   },
-  buttonText: {
+  contactText: {
     color: "white",
     fontWeight: "bold",
-    textAlign: "center",
+  },
+  spinner: {
+    marginTop: 20,
   },
 });

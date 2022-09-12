@@ -1,5 +1,7 @@
-import HomeScreen from './home';
-import ContactUsScreen from './contact';
+import HomeScreen from "./home";
+import ContactUsScreen from "./contact";
+import PokedexScreen from "./pokedex";
+import PokemonDetails from "./details";
 
 export {
   /* ----- Home -----*/
@@ -7,4 +9,8 @@ export {
 
   /* ----- Contact Us -----*/
   ContactUsScreen,
+
+  /* ----- Pokedex -----*/
+  PokedexScreen,
+  PokemonDetails,
 };
