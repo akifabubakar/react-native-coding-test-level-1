@@ -1,7 +1,12 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
-import { ContactUsScreen, HomeScreen } from "../screens";
+import {
+  ContactUsScreen,
+  HomeScreen,
+  PokedexScreen,
+  PokemonDetails,
+} from "../screens";
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +32,22 @@ export function AppStack() {
         component={ContactUsScreen}
         options={{
           title: "Contact Us",
+          headerBackTitle: "",
+        }}
+      />
+      <Stack.Screen
+        name="Pokedex"
+        component={PokedexScreen}
+        options={{
+          title: "Pokedex",
+          headerBackTitle: "",
+        }}
+      />
+      <Stack.Screen
+        name="Details"
+        component={PokemonDetails}
+        options={{
+          title: "Details",
           headerBackTitle: "",
         }}
       />
